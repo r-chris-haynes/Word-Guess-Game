@@ -4,28 +4,61 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Hangman</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <body>
     
-<h1>Guess the Board Game</h1>
+<!-- <h1>Guess the Board Game</h1> -->
+<div class="container">
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+        <h1 class="display-3">Hangman</h1>
+        <p class="lead">Guess which Simpsons character I'm thinking of</p>
+    </div>
+</div>
 
-<h3>Press any key to start!</h3>
+<div class="card">
+    <div class="card-header">
+      Name to Guess
+    </div>
+    <div class="card-body">
+        <h2>_ _ _ _ _ _</h2>
+    </div>
+</div>
 
-<h4>Current Word</h4>
-<div id="current-word"></div>
+<br>
 
-<h4>Guesses Remaining</h4>
-<div id="guesses-remaining"></div>
+<div class="card">
+    <div class="card-body">
+        Wrong Guesses: <span id="wrongnGuesses"></span>
+    </div>
+</div>
+  
+<br>
 
-<h4>Letters Already Guessed</h4>
-<div id="already-guessed"></div>
+<div class="card">
+    <div class="card-body">
+        Guesses Left: <span id="numGuesses"></span> 
+    </div>
+</div>
 
-<h4>Wins</h4>
-<div id="wins"></div>
+<br>
 
-<h4>Losses</h4>
-<div id="losses"></div>
+<div class="card">
+    <div class="card-body">
+        Win Counter: <span id="winCounter"></span> 
+    </div>
+</div>
+
+<br>
+
+<div class="card">
+    <div class="card-body">
+        Loss Counter: <span id="lossCounter"></span> 
+    </div>
+</div>
 
 <script type="text/javascript" src ="assets/javascript/game.js"></script>
 
