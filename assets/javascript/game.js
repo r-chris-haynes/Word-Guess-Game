@@ -26,6 +26,8 @@ function startGame () {
         blanksAndSuccesses.push("_");
     }
 
+    document.getElementById("nameToGuess").innerHTML = blanksAndSuccesses.join(" ");
+
     
     console.log(selectedName);
     console.log(lettersInName);
