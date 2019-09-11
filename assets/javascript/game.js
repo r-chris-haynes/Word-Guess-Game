@@ -15,7 +15,11 @@ var guessesLeft = 9;
 
 function startGame () {
     selectedName = nameOptions[Math.floor(Math.random() * nameOptions.length)];
-    console.log(selectedName)
+    lettersInName = selectedName.split("");
+    
+    
+    console.log(selectedName);
+    console.log(lettersInName);
 }
 
 startGame();
