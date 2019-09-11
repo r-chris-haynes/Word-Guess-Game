@@ -20,13 +20,16 @@ function startGame () {
 
     blanksAndSuccesses = [];
     wrongLetters = [];
-    guessesLeft = [];
+    guessesLeft = 9;
 
     for (var i = 0; i < numBlanks; i++) {
         blanksAndSuccesses.push("_");
     }
 
     document.getElementById("nameToGuess").innerHTML = blanksAndSuccesses.join(" ");
+    document.getElementById("numGuesses").innerHTML = guessesLeft;
+    document.getElementById("winCounter").innerHTML = wins;
+    document.getElementById("lossCounter").innerHTML = losses;
 
     
     console.log(selectedName);
