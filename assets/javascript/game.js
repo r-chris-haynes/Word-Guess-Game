@@ -40,6 +40,11 @@ function startGame () {
 
 startGame();
 
+document.onkeyup = function(event) {
+    var letterGuessed = String.fromCharCode(event.keyCode).toLowerCase();
+    alert (letterGuessed)
+}
+
 
 
 
