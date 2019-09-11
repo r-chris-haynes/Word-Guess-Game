@@ -17,10 +17,20 @@ function startGame () {
     selectedName = nameOptions[Math.floor(Math.random() * nameOptions.length)];
     lettersInName = selectedName.split("");
     numBlanks = lettersInName.length;
+
+    blanksAndSuccesses = [];
+    wrongLetters = [];
+    guessesLeft = [];
+
+    for (var i = 0; i < numBlanks; i++) {
+        blanksAndSuccesses.push("_");
+    }
+
     
     console.log(selectedName);
     console.log(lettersInName);
     console.log(numBlanks);
+    console.log(blanksAndSuccesses);
 }
 
 startGame();
