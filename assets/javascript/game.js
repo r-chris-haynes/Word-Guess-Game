@@ -25,8 +25,8 @@ var nameOptions = [
 var selectedName = "";
 var lettersInName = [];
 var numBlanks = 0;
-var blanksAndSuccesses = [];
-var wrongLetters = [];
+// var blanksAndSuccesses = [];
+// var wrongLetters = [];
 
 var wins = 0;
 var losses = 0;
@@ -73,21 +73,22 @@ function checkLetters(letter) {
     for (var i = 0; i < numBlanks; i++) {
       if (selectedName[i] == letter) {
         blanksAndSuccesses[i] = letter;
-        console.log("test")
       }
     }
   }
   else {
       wrongLetters.push(letter);
       guessesLeft --;
+      document.getElementById("wrongGuesses").innerHTML = wrongLetters;
       console.log(guessesLeft);
       document.getElementById("numGuesses").innerHTML = guessesLeft; 
       if (guessesLeft === 0) {
           
         losses ++;
         // guessesLeft = 9;
-        console.log("losses: " + losses)
-      }  
+        console.log("losses: " + losses);
+        document.getElementById("lossCounter").innerHTML = losses;
+      } 
   }
  document.getElementById("nameToGuess").innerHTML = blanksAndSuccesses.join(
     " ");
