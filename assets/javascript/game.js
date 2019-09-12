@@ -81,7 +81,13 @@ function checkLetters(letter) {
       wrongLetters.push(letter);
       guessesLeft --;
       console.log(guessesLeft);
-      document.getElementById("numGuesses").innerHTML = guessesLeft;   
+      document.getElementById("numGuesses").innerHTML = guessesLeft; 
+      if (guessesLeft === 0) {
+          
+        losses ++;
+        // guessesLeft = 9;
+        console.log("losses: " + losses)
+      }  
   }
  document.getElementById("nameToGuess").innerHTML = blanksAndSuccesses.join(
     " ");
