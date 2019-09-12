@@ -38,12 +38,29 @@ function startGame () {
     console.log(blanksAndSuccesses);
 }
 
+function checkLetters(letter) {
+   
+    var isLetterInName = false;
+    
+    for (var i = 0; i < numBlanks; i++) {
+        if (selectedName[i] == letter) {
+            isLetterInName = true;
+            alert("letter found")
+        }
+    }
+    
+    
+}
+
 startGame();
 
 document.onkeyup = function(event) {
     var letterGuessed = String.fromCharCode(event.keyCode).toLowerCase();
-    alert (letterGuessed)
+    checkLetters(letterGuessed);
+    
+    console.log(letterGuessed);
 }
+
 
 
 
