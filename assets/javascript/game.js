@@ -58,14 +58,19 @@ function startGame() {
   console.log(blanksAndSuccesses);
 }
 
+function wrongGuesses(){
+    document.getElementById("wrongGuesses").innerHTML = wrongLetters;
+}
+
+
 function checkLetters(letter) {
   var isLetterInName = false;
 
   for (var i = 0; i < numBlanks; i++) {
     if (selectedName[i] == letter) {
       isLetterInName = true;
-      console.log(isLetterInName);
-      console.log("letter found");
+    //   console.log(isLetterInName);
+    //   console.log("letter found");
     }
   }
 
@@ -75,19 +80,28 @@ function checkLetters(letter) {
         blanksAndSuccesses[i] = letter;
       }
     }
+
+    if(lettersInName.toString() === blanksAndSuccesses.toString()) {
+        wins ++;
+        console.log("wins: " + wins)
+        wrongGuesses();
+    }
+
   } else {
     wrongLetters.push(letter);
     guessesLeft--;
-
-    document.getElementById("wrongGuesses").innerHTML = wrongLetters;
-    console.log(guessesLeft);
+    wrongGuesses();
+    // document.getElementById("wrongGuesses").innerHTML = wrongLetters;
+    // console.log(guessesLeft);
     document.getElementById("numGuesses").innerHTML = guessesLeft;
+    
     if (guessesLeft === 0) {
       wrongLetters = [];
       losses++;
-      document.getElementById("wrongGuesses").innerHTML = wrongLetters;
+      wrongGuesses();
+    //   document.getElementById("wrongGuesses").innerHTML = wrongLetters;
       // guessesLeft = 9;
-      console.log("losses: " + losses);
+    //   console.log("losses: " + losses);
       document.getElementById("lossCounter").innerHTML = losses;
       startGame();
     }
@@ -95,7 +109,7 @@ function checkLetters(letter) {
   document.getElementById("nameToGuess").innerHTML = blanksAndSuccesses.join(
     " "
   );
-}
+};
 
 startGame();
 
