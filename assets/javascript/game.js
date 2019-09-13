@@ -75,23 +75,26 @@ function checkLetters(letter) {
         blanksAndSuccesses[i] = letter;
       }
     }
-  }
-  else {
-      wrongLetters.push(letter);
-      guessesLeft --;
+  } else {
+    wrongLetters.push(letter);
+    guessesLeft--;
+
+    document.getElementById("wrongGuesses").innerHTML = wrongLetters;
+    console.log(guessesLeft);
+    document.getElementById("numGuesses").innerHTML = guessesLeft;
+    if (guessesLeft === 0) {
+      wrongLetters = [];
+      losses++;
       document.getElementById("wrongGuesses").innerHTML = wrongLetters;
-      console.log(guessesLeft);
-      document.getElementById("numGuesses").innerHTML = guessesLeft; 
-      if (guessesLeft === 0) {
-          
-        losses ++;
-        // guessesLeft = 9;
-        console.log("losses: " + losses);
-        document.getElementById("lossCounter").innerHTML = losses;
-      } 
+      // guessesLeft = 9;
+      console.log("losses: " + losses);
+      document.getElementById("lossCounter").innerHTML = losses;
+      startGame();
+    }
   }
- document.getElementById("nameToGuess").innerHTML = blanksAndSuccesses.join(
-    " ");
+  document.getElementById("nameToGuess").innerHTML = blanksAndSuccesses.join(
+    " "
+  );
 }
 
 startGame();
