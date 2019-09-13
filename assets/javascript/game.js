@@ -25,8 +25,8 @@ var nameOptions = [
 var selectedName = "";
 var lettersInName = [];
 var numBlanks = 0;
-// var blanksAndSuccesses = [];
-// var wrongLetters = [];
+var blanksAndSuccesses = [];
+var wrongLetters = [];
 
 var wins = 0;
 var losses = 0;
@@ -82,8 +82,9 @@ function checkLetters(letter) {
     }
 
     if(lettersInName.toString() === blanksAndSuccesses.toString()) {
+        wrongLetters = [];
         wins ++;
-        console.log("wins: " + wins)
+        // console.log("wins: " + wins)
         wrongGuesses();
         startGame();
     }
