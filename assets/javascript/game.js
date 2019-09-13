@@ -8,7 +8,7 @@ var nameOptions = [
   "ned",
   "monty",
   "nelson",
-  "mihouse",
+  "milhouse",
   "barney",
   "smithers",
   "edna",
@@ -85,6 +85,7 @@ function checkLetters(letter) {
         wins ++;
         console.log("wins: " + wins)
         wrongGuesses();
+        startGame();
     }
 
   } else {
