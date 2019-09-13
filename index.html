@@ -1,72 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Hangman</title>
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="./assets/css/style.css">
-</head>
-<body>
-    
-<!-- <h1>Guess the Board Game</h1> -->
-<div class="container">
-    <div class="row">  
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link href="https://fonts.googleapis.com/css?family=Schoolbell|Ubuntu&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <!-- <h1>Guess the Board Game</h1> -->
+    <div class="container">
+      <div class="row">
         <div class="col-md-3"></div>
         <div class="col-md-6">
-            
-        <img src="./assets/images/SimpsonsLogo.png">
-        <h2 class="lead" id="instructions">Hangman!</h2>
-       
-    </div>
+          <img src="./assets/images/SimpsonsLogo.png" />
+        </div>
         <div class="col-md-3"></div>
-    </div> 
-</div>
-
-<div class="card">
-    <div class="card-header">
-      Name to Guess
+      </div>
     </div>
-    <div class="card-body">
+
+    <div>
+      <h1  id="instructions"><em>Hangman!</em></h1>
+    </div>
+
+    <div class="card ">
+      <div class="card-header" >
+        Name to Guess
+      </div>
+      <div class="card-body">
         <h2 id="nameToGuess">_ _ _ _ _ _ _ _ _</h2>
+      </div>
     </div>
-</div>
 
-<br>
+    <br />
 
-<div class="card">
-    <div class="card-body">
+    <div class="card">
+      <div class="card-body">
         Wrong Guesses: <span id="wrongGuesses"></span>
+      </div>
     </div>
-</div>
-  
-<br>
 
-<div class="card">
-    <div class="card-body">
-        Guesses Left: <span id="numGuesses"></span> 
+    <br />
+
+    <div class="card">
+      <div class="card-body">Guesses Left: <span id="numGuesses"></span></div>
     </div>
-</div>
 
-<br>
+    <br />
 
-<div class="card">
-    <div class="card-body">
-        Win Counter: <span id="winCounter"></span> 
+    <div class="card">
+      <div class="card-body">Win Counter: <span id="winCounter"></span></div>
     </div>
-</div>
 
-<br>
+    <br />
 
-<div class="card">
-    <div class="card-body">
-        Loss Counter: <span id="lossCounter"></span> 
+    <div class="card">
+      <div class="card-body">Loss Counter: <span id="lossCounter"></span></div>
     </div>
-</div>
 
-<script type="text/javascript" src ="assets/javascript/game.js"></script>
-
-</body>
+    <script type="text/javascript" src="assets/javascript/game.js"></script>
+  </body>
 </html>
