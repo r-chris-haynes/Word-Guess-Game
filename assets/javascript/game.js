@@ -59,7 +59,7 @@ function startGame() {
 }
 
 function wrongGuesses(){
-    document.getElementById("wrongGuesses").innerHTML = wrongLetters;
+    document.getElementById("wrongGuesses").innerHTML = wrongLetters.join(" ");
 }
 
 
