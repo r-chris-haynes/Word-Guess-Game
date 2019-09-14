@@ -19,11 +19,11 @@
     <!-- <h1>Guess the Board Game</h1> -->
     <div class="container">
       <div class="row">
-        <div class="col-md-3"></div>
-        <div class="col-md-6">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
           <img src="./assets/images/SimpsonsLogo.png" />
         </div>
-        <div class="col-md-3"></div>
+        <div class="col-md-2"></div>
       </div>
     </div>
 
@@ -31,39 +31,35 @@
       <h1  id="instructions"><em>Hangman!</em></h1>
     </div>
 
-    <div class="card ">
-      <div class="card-header" >
-        Name to Guess
-      </div>
-      <div class="card-body">
-        <h2 id="nameToGuess">_ _ _ _ _ _ _ _ _</h2>
-      </div>
+    <div class="container">
+       
+        <h2 class="gameText"> Guess the Character</h2>
+        
+        <h2 id="nameToGuess" class="gameText">_ _ _ _ _ _ _ _ _</h2>
     </div>
 
     <br />
 
-    <div class="card">
-      <div class="card-body">
-        Wrong Guesses: <span id="wrongGuesses"></span>
-      </div>
+    <div class="container gameText" >
+       <h2> Wrong Guesses: <span id="wrongGuesses" class="gameText"></span></h2>
     </div>
 
     <br />
 
-    <div class="card">
-      <div class="card-body">Guesses Left: <span id="numGuesses"></span></div>
+    <div class="container gameText">
+      <h2>Guesses Left: <span id="numGuesses"></span></h2>
     </div>
 
     <br />
 
-    <div class="card">
-      <div class="card-body">Win Counter: <span id="winCounter"></span></div>
+    <div class="container gameText">
+      <h2>Win Counter: <span id="winCounter"></span></h2>
     </div>
 
     <br />
 
-    <div class="card">
-      <div class="card-body">Loss Counter: <span id="lossCounter"></span></div>
+    <div class="container gameText">
+      <h2>Loss Counter: <span id="lossCounter"></span></h2>
     </div>
 
     <script type="text/javascript" src="assets/javascript/game.js"></script>

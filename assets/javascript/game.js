@@ -69,8 +69,6 @@ function checkLetters(letter) {
   for (var i = 0; i < numBlanks; i++) {
     if (selectedName[i] == letter) {
       isLetterInName = true;
-    //   console.log(isLetterInName);
-    //   console.log("letter found");
     }
   }
 
@@ -101,9 +99,7 @@ function checkLetters(letter) {
       wrongLetters = [];
       losses++;
       wrongGuesses();
-    //   document.getElementById("wrongGuesses").innerHTML = wrongLetters;
-      // guessesLeft = 9;
-    //   console.log("losses: " + losses);
+      
       document.getElementById("lossCounter").innerHTML = losses;
       startGame();
     }
